@@ -11,9 +11,9 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](```http://localhost:3000```) to view it in your browser.
 
-<p style="color:red">The page will reload when you make changes.\
-You may also see any lint errors in the console.</p>
+<p style="color:red">The page will reload when you make changes.\</p>
 
+You may also see any lint errors in the console.
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
