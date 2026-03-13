@@ -3,6 +3,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Portfolio from './components/Portfolio';
 import Experience from './components/Experience';
+import Education from './components/Education';
 import Contact from './components/Contact';
 import SocialLinks from './components/SocialLinks';
 import Blog from './components/Blog';
@@ -17,6 +18,7 @@ function App() {
       <Blog />
       <Portfolio />
       <Experience />
+      <Education />
       <Contact />
       <SocialLinks />
       <Toaster position="bottom-right" />
