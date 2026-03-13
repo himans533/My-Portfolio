@@ -18,8 +18,7 @@ const Portfolio = () => {
       title: "ATS Hiring System",
       description: "Full-stack recruitment system for job posting, candidate tracking, and interview scheduling.",
       image: arrayDestruct,
-      technologies: ["React-Native", "Expo-Tool", "MySQL", "REST API"],
-      liveLink: "https://example.com",
+      technologies: ["React", "MySQL", "REST API"],
       githubLink: "https://github.com/hanwat12/Ats-Hiring-System",
       features: [
         "Role-based access control for Admin, Recruiter, and Hiring Manager",
@@ -34,28 +33,25 @@ const Portfolio = () => {
     {
       id: 2,
       title: "Nexa-AI",
-      description: "AI-powered assistant built using the Google Gemini API that allows users to generate intelligent responses, ask questions, and interact with an AI chatbot interface in real time.",
+      description: "AI-powered assistant built using the Google Gemini API for intelligent conversational responses and real-time interaction.",
       image: nexaAiImage,
-      technologies: ["TypeScript", "Gemini AI API", "HTML", "REST API"],
-      liveLink: "https://example.com",
+      technologies: ["React", "Gemini API", "JavaScript"],
       githubLink: "https://github.com/himans533/NEXA-AI",
       features: [
         "AI chatbot powered by Google Gemini API",
         "Real-time prompt and response interaction",
         "Secure API integration for AI request handling",
         "Clean and responsive user interface",
-        "TypeScript-based application architecture",
         "Efficient API request and response management"
       ],
-      category: "ai"
+      category: "frontend"
     },
     {
       id: 3,
       title: "Project Management Software",
-      description: "Enterprise-style project management platform designed to manage projects, team hierarchy, and task tracking with role-based access control for organizations.",
+      description: "Enterprise-style project management platform designed to manage projects, team hierarchy, and task tracking.",
       image: projectManagementImage,
-      technologies: ["Python", "Flask", "MySQL", "HTML", "CSS", "JavaScript"],
-      liveLink: "https://example.com",
+      technologies: ["Python", "Flask", "MySQL"],
       githubLink: "https://github.com/himans533/Project-Management-Soft",
       features: [
         "Role-based access control for Admin, Manager, and Employees",
@@ -70,10 +66,9 @@ const Portfolio = () => {
     {
       id: 4,
       title: "Monthly Challenge Management System",
-      description: "Spring Boot based REST API for managing monthly coding challenges. The system allows users to create, update, retrieve, and delete challenges using a structured backend architecture.",
+      description: "Spring Boot REST API for managing monthly coding challenges with complete CRUD operations and structured architecture.",
       image: monthChallengeImage,
-      technologies: ["Java", "Spring Boot", "Spring Data JPA", "Maven", "REST API"],
-      liveLink: "https://example.com",
+      technologies: ["Java", "Spring Boot", "Spring Data JPA", "REST API"],
       githubLink: "https://github.com/himans533/Month_Challenge",
       features: [
         "RESTful API for managing monthly challenges",
@@ -81,24 +76,22 @@ const Portfolio = () => {
         "Layered architecture using Controller, Service, and Repository pattern",
         "Spring Data JPA integration for database interaction",
         "DTO based data structure for challenge management",
-        "Maven based project structure with scalable backend design"
+        "Scalable backend design following MVC pattern"
       ],
-      category: "Full Stack"
+      category: "backend"
     },
     {
       id: 5,
       title: "Note Tracker API",
-      description: "Spring Boot based RESTful application for managing personal notes with full CRUD operations and a structured backend architecture.",
+      description: "Spring Boot REST API application for managing personal notes with complete CRUD operations and structured backend.",
       image: noteTrackerImage,
-      technologies: ["Java", "Spring Boot", "Spring Data JPA", "MySQL", "REST API", "Maven"],
-      liveLink: "",
+      technologies: ["Java", "Spring Boot", "Spring Data JPA", "MySQL", "REST API"],
       githubLink: "https://github.com/himans533/NoteTracker",
       features: [
         "REST API for creating, updating, retrieving, and deleting notes",
         "Structured backend architecture using Controller, Service, and Repository layers",
         "Spring Data JPA integration for database management",
         "CRUD operations for efficient note tracking",
-        "Scalable Maven-based project configuration",
         "Clean and modular backend code structure"
       ],
       category: "backend"
@@ -106,18 +99,16 @@ const Portfolio = () => {
     {
       id: 6,
       title: "Amazon Clone",
-      description: "Frontend e-commerce web application inspired by Amazon that replicates product browsing, responsive layouts, and interactive shopping UI components.",
+      description: "Frontend e-commerce UI application demonstrating responsive design and interactive React components.",
       image: amazonCloneImage,
-      technologies: ["React", "JavaScript", "HTML", "CSS"],
-      liveLink: "",
+      technologies: ["React", "JavaScript", "CSS"],
       githubLink: "https://github.com/himans533/Amazon-Clone",
       features: [
-        "Responsive Amazon-style e-commerce user interface",
+        "Responsive e-commerce user interface",
         "Dynamic product listing and product card components",
-        "Interactive shopping cart UI experience",
-        "Reusable React components for scalable frontend structure",
-        "Modern responsive layout using HTML and CSS",
-        "Clean frontend architecture for UI replication"
+        "Interactive shopping cart UI components",
+        "Reusable React components for scalable frontend architecture",
+        "Modern responsive layout using CSS"
       ],
       category: "frontend"
     }

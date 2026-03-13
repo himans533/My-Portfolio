@@ -7,7 +7,6 @@ import {
   FiSend,
   FiGithub,
   FiLinkedin,
-  FiTwitter,
   FiCheckCircle,
 } from "react-icons/fi";
 import toast from "react-hot-toast";
@@ -60,19 +59,15 @@ const Contact = () => {
     },
   ];
 
-  /* ✅ ADD YOUR REAL LINKS HERE */
+  /* ✅ SOCIAL LINKS - Add your verified profiles */
   const socials = [
     {
       icon: FiGithub,
-      url: "https://github.com/YOUR_USERNAME",
+      url: "https://github.com/himans533",
     },
     {
       icon: FiLinkedin,
-      url: "https://linkedin.com/in/YOUR_USERNAME",
-    },
-    {
-      icon: FiTwitter,
-      url: "https://twitter.com/YOUR_USERNAME",
+      url: "https://linkedin.com/in/YOUR_LINKEDIN_PROFILE",
     },
   ];
 

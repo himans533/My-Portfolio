@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import { ReactTyped } from "react-typed";
@@ -8,6 +8,14 @@ import AnimatedButton from "./ui/AnimatedButton";
 import TechBadge from "./ui/TechBadge";
 
 const Home = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const techStack = [
     "Spring Boot",
     "React",
@@ -21,11 +29,20 @@ const Home = () => {
       name="home"
       className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden"
     >
-      {/* 🌌 Spotlight Gradient Background */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute left-1/2 top-[-200px] w-[700px] h-[700px] bg-primary/20 blur-[140px] rounded-full -translate-x-1/2" />
-        <div className="absolute bottom-[-200px] right-[-100px] w-[500px] h-[500px] bg-accent/20 blur-[120px] rounded-full" />
-      </div>
+      {/* Parallax Background Effects */}
+      <motion.div 
+        className="absolute inset-0 -z-10"
+        style={{ y: scrollY * 0.5 }}
+      >
+        <motion.div 
+          className="absolute left-1/2 top-[-200px] w-[700px] h-[700px] bg-primary/20 blur-[140px] rounded-full -translate-x-1/2 animate-blob"
+          style={{ y: scrollY * 0.3 }}
+        />
+        <motion.div 
+          className="absolute bottom-[-200px] right-[-100px] w-[500px] h-[500px] bg-accent/20 blur-[120px] rounded-full animate-blob"
+          style={{ y: scrollY * 0.2 }}
+        />
+      </motion.div>
 
       <div className="max-w-7xl w-full grid lg:grid-cols-2 gap-14 items-center">
         {/* ===== LEFT CONTENT ===== */}
@@ -40,16 +57,20 @@ const Home = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full
-            bg-emerald-500/10 text-emerald-500 text-sm font-semibold"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 text-emerald-500 text-sm font-semibold border border-emerald-500/20"
           >
-            ● Available for Opportunities
+            <motion.span
+              animate={{ scale: [1, 1.2, 1] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="w-2 h-2 rounded-full bg-emerald-500"
+            />
+            Available for Opportunities
           </motion.div>
 
           {/* Headline */}
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
             Hi, I'm{" "}
-            <span className="bg-gradient-to-r from-teal-400 to-emerald-500 text-transparent bg-clip-text">
+            <span className="bg-gradient-to-r from-teal-400 to-emerald-500 text-transparent bg-clip-text animate-gradient-flow">
               Himanshu Hanwat
             </span>
           </h1>
@@ -60,8 +81,8 @@ const Home = () => {
               strings={[
                 "Full Stack Developer",
                 "Spring Boot Specialist",
-                "Microservices Architect",
-                "Problem Solver",
+                "Backend Architecture Expert",
+                "Scalable Software Engineer",
               ]}
               typeSpeed={50}
               backSpeed={30}
@@ -71,9 +92,7 @@ const Home = () => {
 
           {/* Description */}
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-xl leading-relaxed">
-            I design and build scalable web applications using modern
-            technologies. My focus is creating fast, secure, and user-friendly
-            systems that deliver real business value.
+            I design and build scalable web applications using modern technologies like Spring Boot, React, and Docker. Specialized in backend architecture, microservices, and creating high-performance systems that deliver measurable business value.
           </p>
 
           {/* Tech Stack Floating Badges */}

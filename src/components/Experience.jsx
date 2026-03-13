@@ -35,7 +35,7 @@ const Experience = () => {
     backend: [
       { name: "Node.js", icon: SiNodedotjs, level: "Advanced", link: "https://nodejs.org/en/docs" },
       { name: "Java", icon: FaJava, level: "Advanced", link: "https://docs.oracle.com/en/java/" },
-      { name: "Spring Boot", icon: SiSpring, level: "Intermediate", link: "https://docs.spring.io/spring-boot/index.html" },
+      { name: "Spring Boot", icon: SiSpring, level: "Advanced", link: "https://docs.spring.io/spring-boot/index.html" },
     ],
     database: [
       { name: "MongoDB", icon: SiMongodb, level: "Advanced", link: "https://www.mongodb.com/docs/" },
@@ -138,12 +138,11 @@ const Experience = () => {
         border border-gray-200 dark:border-white/10 shadow-xl backdrop-blur-xl">
 
           <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-3">
-            Always Learning 🚀
+            Continuous Learning & Development
           </h3>
 
           <p className="text-gray-600 dark:text-gray-400">
-            I constantly explore modern technologies like Cloud, Microservices,
-            and System Design to stay ahead in the industry.
+            I stay updated with industry trends, modern technologies, and best practices to ensure high-quality, scalable solutions.
           </p>
         </div>
 

@@ -5,6 +5,11 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    fontFamily: {
+      sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+      heading: ['Sora', 'system-ui', '-apple-system', 'sans-serif'],
+      mono: ['Fira Code', 'monospace'],
+    },
     extend: {
       colors: {
         // Primary brand colors - Enhanced for elite feel
