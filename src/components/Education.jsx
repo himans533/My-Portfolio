@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FiAward, FiBookOpen, FiCalendar, FiMapPin } from "react-icons/fi";
+import { FiAward, FiBookOpen, FiCalendar, FiMapPin, FiExternalLink } from "react-icons/fi";
 import ScrollReveal from "./ui/ScrollReveal";
 import GlassmorphicCard from "./ui/GlassmorphicCard";
 import rajivGandhiUniversityImage from "../assets/portfolio/Rajiv_Gandhi_Proudyogiki_Vishwavidyalaya.jpg";
@@ -99,38 +99,57 @@ const Education = () => {
               <div className="flex h-full">
                 {/* Left side - College Image */}
                 <motion.div
-                  className="w-1/2 overflow-hidden"
+                  className="w-1/2 overflow-hidden cursor-pointer group relative"
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
+                  onClick={() => edu.universityUrl && window.open(edu.universityUrl, "_blank")}
                 >
                   <img
                     src={edu.collegeImage}
                     alt={edu.institution}
                     className="w-full h-full object-cover"
                   />
+                  {/* Hover overlay for college image */}
+                  <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <FiExternalLink className="w-8 h-8 text-white" />
+                  </div>
                 </motion.div>
                 {/* Right side - University Image */}
                 <motion.div
-                  className="w-1/2 overflow-hidden"
+                  className="w-1/2 overflow-hidden cursor-pointer group relative"
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
+                  onClick={() => edu.universityUrl && window.open(edu.universityUrl, "_blank")}
                 >
                   <img
                     src={edu.image}
                     alt={edu.university}
                     className="w-full h-full object-cover"
                   />
+                  {/* Hover overlay for university image */}
+                  <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <FiExternalLink className="w-8 h-8 text-white" />
+                  </div>
                 </motion.div>
               </div>
             ) : (
               // Single image layout for other education
-              <motion.img
-                src={edu.image}
-                alt={edu.institution}
-                className="w-full h-full object-cover"
+              <motion.div
+                className="w-full h-full overflow-hidden cursor-pointer group relative"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
-              />
+                onClick={() => edu.universityUrl && window.open(edu.universityUrl, "_blank")}
+              >
+                <img
+                  src={edu.image}
+                  alt={edu.institution}
+                  className="w-full h-full object-cover"
+                />
+                {/* Hover overlay for single image */}
+                <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <FiExternalLink className="w-8 h-8 text-white" />
+                </div>
+              </motion.div>
             )}
             {/* Overlay Gradient */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
