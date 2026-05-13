@@ -53,6 +53,7 @@ const Portfolio = () => {
       image: projectManagementImage,
       technologies: ["Python", "Flask", "MySQL"],
       githubLink: "https://github.com/himans533/Project-Management-Soft",
+      liveLink:"https://project-web-production.up.railway.app/",
       features: [
         "Role-based access control for Admin, Manager, and Employees",
         "Project creation and task assignment workflow",
